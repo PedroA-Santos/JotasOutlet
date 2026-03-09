@@ -168,7 +168,7 @@ const TeamPage = () => {
         viewport={{ once: true }}
       >
         <a
-          href={`https://wa.me/554498448228?text=Olá tenho interesse na camisa ${team.name}`}
+          href={`https://wa.me/554498448228?text=${encodeURIComponent(`Olá tenho interesse na camisa ${team.name}`)}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-3 w-full max-w-md mx-auto py-4 rounded-xl bg-primary text-primary-foreground font-heading text-sm uppercase tracking-wider hover:opacity-90 transition-opacity"
