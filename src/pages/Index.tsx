@@ -56,6 +56,12 @@ const Index = () => {
           <p className="text-muted-foreground text-sm mb-4">
             Catálogo exclusivo — Camisas de time de futebol
           </p>
+          <p className="text-muted-foreground text-xs">
+            © {new Date().getFullYear()} Jotas Sport Outlet. Todos os direitos reservados.
+          </p>
+          <p className="text-muted-foreground text-xs">
+            Desenvolvido por <a href="https://www.instagram.com/pedro.a.santos_/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Pedro Antônio</a>
+          </p>
 
           {/* Social */}
           <div className="flex justify-center gap-6">

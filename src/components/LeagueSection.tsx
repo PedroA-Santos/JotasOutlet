@@ -40,6 +40,26 @@ const LeagueSection = ({ league }: LeagueSectionProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
+  // FUNÇÃO DE NAVEGAÇÃO COM LÓGICA RETRÔ
+  const handleTeamClick = (teamName: string) => {
+    // 1. Gera o slug básico (ex: barcelona)
+    const baseSlug = teamName
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/\./g, "");
+
+    // 2. Verifica se a liga atual é a seção de Retrôs
+    const isRetro = league.name.toLowerCase().includes("retro") || 
+                    league.name.toLowerCase().includes("retrô");
+
+    // 3. Se for retrô, adiciona o sufixo na URL (ex: barcelona-retro)
+    const finalSlug = isRetro ? `${baseSlug}-retro` : baseSlug;
+
+    navigate(`/time/${finalSlug}`);
+  };
+
   return (
     <motion.div
       className="rounded-lg border border-border bg-card overflow-hidden"
@@ -83,7 +103,7 @@ const LeagueSection = ({ league }: LeagueSectionProps) => {
               {league.teams.map((team, i) => (
                 <motion.div
                   key={team.name}
-                  onClick={() => navigate(`/time/${team.name.toLowerCase().replace(/\s+/g, "-").replace(/\./g, "")}`)}
+                  onClick={() => handleTeamClick(team.name)} // <--- CHAMA A NOVA FUNÇÃO
                   role="button"
                   tabIndex={0}
                   className="flex flex-col items-center gap-2 p-3 rounded-lg bg-secondary/60 border border-border hover:border-primary hover:shadow-[var(--shadow-glow)] transition-all cursor-pointer group"
