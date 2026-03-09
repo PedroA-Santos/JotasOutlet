@@ -58,7 +58,7 @@ const HeroSection = () => {
             Instagram
           </a>
           <a
-            href="https://wa.me/"
+            href="https://www.instagram.com/jotassportoutlet/?utm_source=ig_web_button_share_sheet"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-full px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity font-heading text-sm uppercase tracking-wider"
@@ -66,26 +66,6 @@ const HeroSection = () => {
             <Phone className="w-5 h-5" />
             WhatsApp
           </a>
-        </motion.div>
-
-        {/* Quick links */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-lg mt-2"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-        >
-          {["Camisas a Pronta Entrega", "Conjuntos Infantis (Kids)", "Fazer Pedido"].map(
-            (label) => (
-              <a
-                key={label}
-                href="#catalogo"
-                className="px-4 py-3 rounded-lg bg-card/80 backdrop-blur border border-border text-center font-heading text-sm uppercase tracking-wider text-foreground hover:border-primary hover:shadow-[var(--shadow-glow)] transition-all"
-              >
-                {label}
-              </a>
-            )
-          )}
         </motion.div>
       </div>
 
