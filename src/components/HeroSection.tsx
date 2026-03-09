@@ -49,7 +49,7 @@ const HeroSection = () => {
           transition={{ delay: 0.45 }}
         >
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/jotassportoutlet/?utm_source=ig_web_button_share_sheet"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-full px-6 py-3 rounded-lg bg-card border border-border hover:border-primary transition-all hover:shadow-[var(--shadow-glow)] font-heading text-sm uppercase tracking-wider text-foreground"
@@ -58,7 +58,7 @@ const HeroSection = () => {
             Instagram
           </a>
           <a
-            href="https://www.instagram.com/jotassportoutlet/?utm_source=ig_web_button_share_sheet"
+            href="https://wa.me/554498448228?text=Olá tenho interesse na camisa"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-full px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity font-heading text-sm uppercase tracking-wider"
