@@ -11,6 +11,8 @@ const TeamPage = () => {
   const { teamSlug } = useParams<{ teamSlug: string }>();
   const navigate = useNavigate();
 
+
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -37,6 +39,9 @@ const TeamPage = () => {
       </div>
     );
   }
+
+  const message = `Olá tenho interesse na camisa ${team?.name || ""}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=554498448228&text=${encodeURIComponent(message)}`;
 
   const badge = getTeamBadge(team.name);
   const data = catalogo[team.slug];
@@ -168,13 +173,12 @@ const TeamPage = () => {
         viewport={{ once: true }}
       >
         <a
-          href={`https://wa.me/554498448228?text=${encodeURIComponent(`Olá tenho interesse na camisa ${team.name}`)}`}
+          href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-3 w-full max-w-md mx-auto py-4 rounded-xl bg-primary text-primary-foreground font-heading text-sm uppercase tracking-wider hover:opacity-90 transition-opacity"
         >
-          <Phone className="w-5 h-5" />
-          Fazer pedido pelo WhatsApp
+          Clique aqui
         </a>
       </motion.div>
     </div>
