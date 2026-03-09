@@ -168,7 +168,7 @@ const TeamPage = () => {
         viewport={{ once: true }}
       >
         <a
-          href="https://wa.me/554498448228?text=Olá tenho interesse na camisa"
+          href={`https://wa.me/554498448228?text=Olá! Tenho interesse nas camisas do ${team.name}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-3 w-full max-w-md mx-auto py-4 rounded-xl bg-primary text-primary-foreground font-heading text-sm uppercase tracking-wider hover:opacity-90 transition-opacity"
@@ -200,7 +200,7 @@ function JerseyCard({
 
   return (
     <motion.a
-      href={`https://wa.me/?text=Olá! Tenho interesse na ${jersey.label} do ${teamName} - ${jersey.year}`}
+      href={`https://wa.me/554498448228?text=Olá! Tenho interesse na camisa  ${jersey.label} do ${teamName} - ${jersey.year}`}
       target="_blank"
       rel="noopener noreferrer"
       className="group flex flex-col rounded-xl bg-card border border-border hover:border-primary overflow-hidden transition-all hover:shadow-[var(--shadow-glow)]"
