@@ -1515,6 +1515,39 @@ export const catalogo = {
         ]
       },
       {
+        "nome": "argentina-2026-world-cup-home-jersey-player-version",
+        "imagens": [
+          "/camisetas/argentina/argentina-2026-world-cup-home-jersey-player-version/1.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-jersey-player-version/2.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-jersey-player-version/3.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-jersey-player-version/4.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-jersey-player-version/5.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-jersey-player-version/6.jpg"
+        ]
+      },
+      {
+        "nome": "argentina-2026-world-cup-home-kit",
+        "imagens": [
+          "/camisetas/argentina/argentina-2026-world-cup-home-kit/1.jpg"
+        ]
+      },
+      {
+        "nome": "argentina-2026-world-cup-home-long-sleeve-jersey-player-version",
+        "imagens": [
+          "/camisetas/argentina/argentina-2026-world-cup-home-long-sleeve-jersey-player-version/1.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-long-sleeve-jersey-player-version/10.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-long-sleeve-jersey-player-version/11.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-long-sleeve-jersey-player-version/2.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-long-sleeve-jersey-player-version/3.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-long-sleeve-jersey-player-version/4.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-long-sleeve-jersey-player-version/5.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-long-sleeve-jersey-player-version/6.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-long-sleeve-jersey-player-version/7.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-long-sleeve-jersey-player-version/8.jpg",
+          "/camisetas/argentina/argentina-2026-world-cup-home-long-sleeve-jersey-player-version/9.jpg"
+        ]
+      },
+      {
         "nome": "argentina-86-salute-to-maradona-legend-jersey",
         "imagens": [
           "/camisetas/argentina/argentina-86-salute-to-maradona-legend-jersey/img-0.jpg",
@@ -15325,6 +15358,10 @@ export const catalogo = {
         ]
       }
     ]
+  },
+  "milan": {
+    "nome": "milan",
+    "produtos": []
   },
   "mineiro": {
     "nome": "Atlético Mineiro",

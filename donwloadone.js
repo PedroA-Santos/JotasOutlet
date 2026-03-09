@@ -3,10 +3,10 @@ import path from "path";
 import axios from "axios";
 import * as cheerio from "cheerio";
 
-const url = "https://worldclubs.ru/product/chile-2022-home-world-cup-jersey/";
+const url = "https://worldclubs.ru/product/mens-argentina-2026-world-cup-home-long-sleeve-jersey-player-version/";
 
 // pasta base do seu projeto
-const baseFolder = "./public/camisetas";
+const baseFolder = "./public/camisetas/argentina";
 
 async function downloadImages() {
   const { data } = await axios.get(url);

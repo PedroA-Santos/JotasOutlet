@@ -24,16 +24,8 @@ async function uploadDiretorio(dir) {
       await uploadDiretorio(caminhoCompleto);
     } else {
       try {
-
-        // caminho relativo a partir de camisetas
         const relative = path.relative("public", caminhoCompleto);
-
-        // remove extensão
-        const publicId = relative
-          .replace(/\\/g, "/")
-          .replace(/\.[^/.]+$/, "");
-
-        // pasta da imagem
+        const publicId = relative.replace(/\\/g, "/").replace(/\.[^/.]+$/, "");
         const folder = path.dirname(publicId);
 
         const result = await cloudinary.uploader.upload(caminhoCompleto, {
@@ -43,13 +35,26 @@ async function uploadDiretorio(dir) {
           resource_type: "image"
         });
 
-        console.log("Upload:", result.secure_url);
-
+        console.log("✔ Sucesso:", result.secure_url);
       } catch (error) {
-        console.error("Erro:", caminhoCompleto, error.message);
+        console.error("❌ Erro em:", caminhoCompleto, error.message);
       }
     }
   }
 }
 
-uploadDiretorio(pastaBase);
+// LÓGICA PARA SUBIR APENAS UMA PASTA ESPECÍFICA
+const argumentoPasta = process.argv[2]; 
+
+if (argumentoPasta) {
+  const caminhoAlvo = path.join(pastaBase, argumentoPasta);
+  if (fs.existsSync(caminhoAlvo)) {
+    console.log(`🚀 Iniciando upload da pasta: ${argumentoPasta}`);
+    uploadDiretorio(caminhoAlvo).then(() => console.log("✨ Upload finalizado!"));
+  } else {
+    console.error("🚫 Erro: Essa pasta não existe dentro de public/camisetas/");
+  }
+} else {
+  console.log("📦 Subindo TUDO de public/camisetas (isso pode demorar)...");
+  uploadDiretorio(pastaBase);
+}
