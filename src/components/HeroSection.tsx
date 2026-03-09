@@ -38,7 +38,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          Catálogo exclusivo de camisas de time de futebol. Pronta entrega para todo o Brasil.
+          Catálogo exclusivo de camisas de time de futebol. Clique no catálogo abaixo para fazer seu pedido!
         </motion.p>
 
         {/* Social buttons */}
